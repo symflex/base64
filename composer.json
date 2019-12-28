@@ -1,0 +1,16 @@
+{
+  "name": "symfony/base64-component",
+  "type": "library",
+  "license": "MIT",
+  "description": "base64 encoder and decoder",
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Symflex\\Component\\Base64\\": "src/"
+    }
+  }
+}
