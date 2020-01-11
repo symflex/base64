@@ -23,19 +23,19 @@ interface Encoder
 
     /**
      * @param string $data
-     * @return mixed
+     * @return string
      */
-    public function decode(string $data);
+    public function decode(string $data): string;
 
     /**
      * @param string $data
      * @return string
      */
-    public function encodeUri(string $data): string;
+    public function encodeUrl(string $data): string;
 
     /**
      * @param string $data
      * @return string
      */
-    public function decodeUri(string $data): string;
+    public function decodeUrl(string $data): string;
 }

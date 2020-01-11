@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Symflex\Component\Base64;
 
@@ -19,9 +20,9 @@ class Base64Encoder implements Encoder
 
     /**
      * @param string $data
-     * @return false|mixed|string
+     * @return string
      */
-    public function decode(string $data)
+    public function decode(string $data): string
     {
         return base64_decode($data);
     }
@@ -30,7 +31,7 @@ class Base64Encoder implements Encoder
      * @param string $data
      * @return string
      */
-    public function encodeUri(string $data): string
+    public function encodeUrl(string $data): string
     {
         return rtrim(strtr(base64_encode($data), self::REPLACE_SYMBOLS), self::REMAINDER_SYMBOL);
     }
@@ -39,7 +40,7 @@ class Base64Encoder implements Encoder
      * @param string $data
      * @return string
      */
-    public function decodeUri(string $data): string
+    public function decodeUrl(string $data): string
     {
         return
             base64_decode(
